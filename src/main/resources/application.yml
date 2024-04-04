@@ -80,5 +80,11 @@ spring:
         event-out:
           destination: FinalProject
           contentType: application/json
-
-
+logging:
+  level:
+    root: ${CUSTOMERCENTER_LOG_LEVEL}
+    org:
+      hibernate:
+        SQL: ${CUSTOMERCENTER_LOG_LEVEL}
+      springframework:
+        cloud: ${CUSTOMERCENTER_LOG_LEVEL}
